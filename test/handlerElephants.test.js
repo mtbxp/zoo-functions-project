@@ -1,9 +1,9 @@
-const { TestScheduler } = require('@jest/core');
+// const { TestScheduler } = require('@jest/core');
 const handlerElephants = require('../src/handlerElephants');
 
 describe('Testes da função HandlerElephants', () => {
   test('retorna a quantidade de elefantes', () => {
-      expect(handlerElephants('count')).toBe(4);
+    expect(handlerElephants('count')).toBe(4);
   });
   test('retorna um array com a relação dos nomes de todos os elefantes', () => {
     const expected = ['Ilana', 'Orval', 'Bea', 'Jefferson'];
