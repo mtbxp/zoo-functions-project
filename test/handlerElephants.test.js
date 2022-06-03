@@ -22,4 +22,15 @@ describe('Testes da função HandlerElephants', () => {
     const expected = ['Friday', 'Saturday', 'Sunday', 'Tuesday'];
     expect(handlerElephants('availability')).toEqual(expected);
   });
+  test('retorna undefined caso não seja passado nenhum parametro', () => {
+    expect(handlerElephants()).toBe(undefined);
+  });
+  test('retorna Parametro invalido ao ser passado um objeto vazio como parametro', () => {
+    const expected = 'Parâmetro inválido, é necessário uma string';
+    expect(handlerElephants({})).toBe(expected);
+  });
+  test('retorna null ao ser passado uma funcionalidade inexistente', () => {
+    const anything = 'qualquer coisa';
+    expect(handlerElephants(anything)).toBe(null);
+  });
 });
